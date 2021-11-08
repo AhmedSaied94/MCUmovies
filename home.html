@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <script src="jquery-3.6.0.js"></script>
+    <script src="jquery-ui/jquery-ui.js"></script>
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-image: url("img/a.jpg");
+            background-attachment:fixed;
+            background-size: cover;
+            font-family: 'Courier New', Courier, monospace;
+                
+        }
+        button{
+            cursor: pointer;
+        }
+        .navcon{
+            width: 100vw;
+            height: 60px;
+            background-color: whitesmoke;
+            display: flex;
+            padding: 0;
+
+            
+            
+        }
+        .r{
+            
+            flex: 1;
+            height: 60;
+            padding: 0;
+        }
+        .r ul{
+            list-style: none;
+            overflow: hidden;
+            padding: 0;
+            margin: 0;
+            height: 60px;
+                    
+            
+            
+
+
+        }
+        .r li{
+            float: left;
+            padding: 0;
+            
+
+        
+            
+            
+        }
+        .r li a{
+            display: block;
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+
+            padding: 20px 25px;    
+
+        }
+
+        .r li a:hover{
+            color: whitesmoke;
+            background-color: rgb(49, 86, 252);
+            font-weight: bold;
+            border-radius: 3px;
+        }
+        .l input:focus{
+            outline: none;
+        }
+
+
+        .info{
+            position: absolute;
+            left: 10%;
+            top: 25%;
+        }
+        .info button{
+            background-color: rgb(49, 86, 252);
+            color: whitesmoke;
+            width: 130px;
+            height: 40px;
+            margin-right: 5px;
+            border: 2px solid whitesmoke;
+            font-weight: bold;
+        }
+        .wel{
+            width: 720px;
+            
+            position: absolute;
+            top: 37%;
+            right: 5%;
+            text-align: center;
+            color: whitesmoke;
+            background-color: rgba(5, 0, 32, 0.500);
+            border: 2px solid whitesmoke;
+            border-radius: 5px;
+        }
+        .slider{
+            width: 800px;
+            height: 400px;
+            display: none;
+            
+            position: absolute;
+            top: 20%;
+            right: 5%;
+        }
+        .slider img{
+        
+            width: 300px;
+            height: 400px;
+            position: inherit;
+            left: 50%;
+            transform: translate(-50%);
+            border-radius: 10px;
+            
+            
+            
+        }
+        .slider button{
+            border-radius: 10px;
+            width: 200px;
+            height: 266.66px; 
+            opacity: 80%;
+            border: none;
+        
+
+        }
+        .imgcon{
+            
+            position: relative;
+            top: 490px;
+            display: grid;
+            margin: 0 10px;
+            padding: 50px;
+            padding-left: 50px;
+            
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        }
+        .imgcon div{
+            width: 200px;
+            max-height: 260px;
+            background-color: rgba(255, 255, 240, 0);
+            margin-top: 30px;
+            margin-left: 25px;
+            position: relative;
+            
+            border-radius: 10px;
+            
+        }
+        .imgcon img{
+            width: 200px;
+            height: 260px;
+            border: 2px solid rgb(49, 86, 252);
+            border-radius: 10px;
+            
+            
+            
+        }
+        .imgcon p{
+            
+            position: relative;
+            bottom: 170px;
+            background-color: rgba(90, 89, 89, 0.37);
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            display: none;
+            color: whitesmoke;
+            min-height: 30px;
+            
+                        
+            
+        }
+        .foot{
+            width: 100vw;
+            height: 50px;
+            position: relative;
+            bottom: -80vh; 
+            background-color: rgba(5, 0, 32, 0.514);
+            text-align: center;
+            
+
+            
+        }
+        .foot a img{
+            width: 30px;
+            height: 30px;
+            padding: 0 5px;
+            padding-top: 10px;
+            
+        }
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="navcon">
+        <div class="r" >
+            <a href="home.html" style="float: left;  margin-left: 10px;  position: relative;  top: 15px;"><img src="img/home.png" alt="Home" style="width: 30px; height: 30px;"></a>
+            <div style=" margin-left: 10px; margin-right: 30px; height: 30px; color: rgb(49, 86, 252); position: relative; float: left; top: 18px; font-weight: bold; font-size: 24px;">Marvel Studio</div>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="Login.html">Login</a></li>
+                <li><a href="Reg.html">Register</a></li>
+            </ul>
+        </div>
+        <div class="l">
+            <input type="text" placeholder="Search" style="text-align: center; margin-right: 5px; border: 1px solid rgb(49, 86, 252); border-radius: 20px; position: relative; top: 12px; height: 30px; width: 200px;">
+            <img src="img/search.png" alt="" style="width: 20px; height: 20px; position: relative; top: 15px; margin-right: 20px;" >
+        </div>
+        <div class="wel">
+            <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Welcome To Marvel Cinematec World History</h1>
+            <p>Here You Will Find All of Marvel's cinematic works <br> From 2008 Till Now And some of Future plans </p>
+            <h2 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Click On Any Photo To Start The Slider</h2>
+        </div>
+    </div>
+    <div class="info" style="color: whitesmoke;">
+        <img src="img/t.png" alt="">
+        <p style="font-weight: 700;">Over 29,000 Comics. One All-New App</p>
+        <button>APP STORE</button> <button>GOOGLE PLAY</button>
+    </div>
+    <div class="slider">
+        <img class="sl" src="img/1.jpeg" alt="">
+        <button class="sl" style="background-image: url(); background-size: 100% 100%; position: inherit; top: 50%; left: 30px; transform: translate(0, -50%); "></button>
+        <button class="sl" style="background-image: url(); background-size: 100% 100%; position: inherit; top: 50%; right: 30px; transform: translate(0, -50%)" ></button>
+        <button style="width: 130px; height: 40px; position: inherit; top: px; right: 50px; font-weight: bold; background-color:rgb(49, 86, 252); border-radius: 0px; opacity: 100%; color: whitesmoke; border: 2px solid whitesmoke;">CLOSE</button>
+
+    </div>
+    <div class="imgcon">
+        
+    </div>
+    <div class="foot">
+        <p style="display: inline; color: whitesmoke; font-size: 24px; font-weight: bold; text-align: center;">Created By Ahmed Saied &copy;</p>
+        <a href="https://www.facebook.com/ahmedsaid95" target="_"><img src="img/001-facebook.png" alt=""></a>
+        <a href="https://twitter.com/AhmedSaied94" target="_"><img src="img/002-twitter.png" alt=""></a>
+        <a href="https://api.whatsapp.com/send?phone=+201158626091" target="_"><img src="img/003-whatsapp.png" alt=""></a>
+  
+
+    </div>
+    <script>
+
+        $(()=>{
+            fetch("https://mcuapi.herokuapp.com/api/v1/movies").then((ln)=>{
+                    return ln.json();
+                }).then((data)=>{
+                    let con = data.data;
+                    let mapd = con.map((i)=>{
+                        return `<div class="img"><img src="${i.cover_url}"><p>${i.title}</p></div>`
+                    })
+                    let str = mapd.join("")
+                    $(".imgcon").append(str)
+                    
+                    let content = $(".imgcon div img");
+                    content.eq(21).attr("src", "https://wegotthiscovered.com/wp-content/uploads/2020/11/124124954_439255137472753_4683960069703843806_n.jpg")
+
+                    let num = 0;
+                    let next = $(".slider button").eq(1);
+                    let prev = $(".slider button").eq(0);
+                    
+                    content.mouseenter((e)=>{
+                        $(e.target).parent().children("p").css("display", "block")
+                    })
+                    content.mouseleave((e)=>{
+                        $(e.target).parent().children("p").css("display", "none")
+                    })
+                    content.click((e)=>{
+                        num = content.index(e.target);
+                        console.log(num)
+                
+                        $(".slider img").attr("src", content.eq(num).attr("src"))
+                        if(num==0) $(".slider button").eq(0).css("background-image", `url("${content.eq(content.length-1).attr("src")}")`)
+                        else $(".slider button").eq(0).css("background-image", `url("${content.eq(num-1).attr("src")}")`)
+                        if(num==content.length-1) $(".slider button").eq(1).css("background-image", `url("${content.eq(0).attr("src")}")`)
+                        else $(".slider button").eq(1).css("background-image", `url("${content.eq(num+1).attr("src")}")`)
+                        //if(document.documentElement.scrollTop>350) document.documentElement.scrollTop = 0;
+                        $(".wel").hide("fade", 500)
+                        $(".slider").hide()
+                        $(".slider").show("fade", 2500)
+
+                    })
+                    next.click(()=>{
+                        var le = num
+                        var ri = num+2
+                        var ce = num+1
+                        if(le==content.length) le = 0; 
+                        $(".slider button").eq(0).css("background-image", `url("${content.eq(le).attr("src")}")`)
+                        if(ri==content.length+1) ri = 1;
+                        if(ri==content.length) ri = 0;
+                        $(".slider button").eq(1).css("background-image", `url("${content.eq(ri).attr("src")}")`)
+                        if(ce==content.length) ce = 0;
+                        $(".slider img").attr("src", content.eq(ce).attr("src"))
+                        num += 1
+                        if(num==content.length) num = 0;
+                    })
+                    prev.click(()=>{
+                        var le = num-2
+                        var ri = num
+                        var ce = num-1
+                        if(le==-1) le = content.length-1;
+                        if(le==-2) le = content.length-2;
+                        $(".slider button").eq(0).css("background-image", `url("${content.eq(le).attr("src")}")`)
+                        if(ri==-1) ri = content.length-1;
+                        $(".slider button").eq(1).css("background-image", `url("${content.eq(ri).attr("src")}")`)
+                        if(ce==-1) ce = content.length-1;
+                        $(".slider img").attr("src", content.eq(ce).attr("src"))
+                        num -=1
+                        if(num==-1) num = content.length-1;
+                    })
+                    $(".info button").eq(0).click(()=>{
+                        window.open("https://apps.apple.com/us/app/marvel-unlimited/id607205403", "_blank")
+                    })
+                    $(".info button").eq(1).click(()=>{
+                        window.open("https://play.google.com/store/apps/details?id=com.marvel.unlimited&hl=en_US&gl=US", "_blank")
+                    })
+                    $(".slider button").eq(2).click(()=>{
+                        $(".slider").hide("fade", 500)
+                        $(".wel").show("fade", 2000)
+                    })
+                    $( function() {
+
+                    function runEffect(sel, efc) {
+                    var selectedEffect = efc
+                    sel.effect( selectedEffect, 500, callback );
+                    };
+
+                    function runEffect2(sel, efc) {
+
+                    var selectedEffect = efc
+                    sel.effect( selectedEffect, 500, callback(sel, selectedEffect) );
+                    };
+
+
+                    function callback(sel, efc) {
+                    setTimeout(function() {
+                        $( sel ).removeAttr( "style" ).hide().fadeIn();
+                    }, 1000 );
+                    setTimeout(()=>{
+                        if(document.documentElement.scrollTop>350 && efc=="puff"){
+                            document.documentElement.scrollTop = 100;              
+
+                        }   
+                    },1000)
+                    };
+
+
+
+
+                    $( ".imgcon .img" ).mouseenter(function(e) {
+                    var sel = $(e.target);
+                    runEffect(sel, "shake");
+                    return false;
+                    });
+
+                    $( ".imgcon .img" ).click(function(e) {
+                    var sel = $(e.target);
+
+                    runEffect2(sel, "puff");
+                    return false;
+                    });
+
+                    
+                    next.click((e)=>{
+                    var sel = $(".slider .sl")                  
+                    runEffect(sel, "fade")
+                    return false
+                    }); 
+
+
+                    prev.click((e)=>{
+                    var sel = $(".slider .sl")
+                    
+                    runEffect(sel, "fade")
+                    
+                    return false
+                    }); 
+                    } );
+
+
+                    
+                }) 
+                            
+        })
+
+
+    </script>
+
+    
+</body>
+</html>
